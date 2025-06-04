@@ -61,7 +61,7 @@ int main(void)
     }
 }
 
-// Validates a provided credit card number with multiple steps. Checking length for first then agains Luhn's algorithm.
+// Validates a provided credit card number by checking Luhn's algorithm.
 bool validate(void)
 {
     long cacheNumber = userCreditCardNumber;
@@ -113,7 +113,13 @@ bool validate(void)
 
 int checkBrand(void)
 {
-    int ccnumber = userCreditCardNumber;
+    int cacheNumber = userCreditCardNumber;
+    while (cacheNumber > 100)
+    {
+        cacheNumber /= 10;
+    }
+    printf("Brand number: %i\n", cacheNumber);
+
     //loop through ccnumber, safe remainder to tempNumber until ccnumber <100
     //look at tempNumber and work through defined states
     return(0);
