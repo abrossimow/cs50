@@ -1,7 +1,8 @@
+// Divides change into provided coins and tells user how many (of each) coins are needed.
+// Task from problem set 1 of CS50 2025
+// 3rd design
 #include <cs50.h>
 #include <stdio.h>
-
-//this time, let's do division!
 
 int main(void) {
     int valueCoin1 = 25;

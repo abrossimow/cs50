@@ -1,8 +1,12 @@
+// Divides change into provided coins and tells user how many (of each) coins are needed.
+// Task from problem set 1 of CS50 2025
+// 1st design
+
 #include <stdio.h>
 #include <cs50.h>
 
 int main(void) {
-    
+
     int quarterNeeded = 0;
     int dimeNeeded = 0;
     int nickelNeeded = 0;

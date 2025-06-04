@@ -1,3 +1,7 @@
+// Divides change into provided coins and tells user how many (of each) coins are needed.
+// Task from problem set 1 of CS50 2025
+// 2nd design
+
 #include <stdio.h>
 #include <cs50.h>
 
@@ -28,7 +32,7 @@ int main(void) {
         int penniessNeeded = checkAgainstCoin(coin4, changeLeft);
         changeLeft -= penniessNeeded*coin4;
         printf("Pennies: %i \n", penniessNeeded);
-        
+
         coinTotal = quartersNeeded + dimesNeeded + nickelsNeeded + penniessNeeded;
     }
     printf("You will need %i coins in total.\n", coinTotal);
