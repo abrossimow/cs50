@@ -10,7 +10,8 @@ int tryCoin(int value, int changeLeft);
 // Global coin counter
 int coinCounter;
 
-int main(void) {
+int main(void)
+{
     // Validate user input
     int changeLeft = 0;
     do
@@ -33,7 +34,8 @@ int main(void) {
 }
 
 // Divides changeLeft by value and returns the remaining change. Also prints division result and changes global counter.
-int tryCoin(int value, int changeLeft) {
+int tryCoin(int value, int changeLeft)
+{
     int coinsUsed = changeLeft / value;
     changeLeft %= value;
     coinCounter += coinsUsed;
