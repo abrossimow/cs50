@@ -49,6 +49,10 @@ int main(void)
                 printf("MASTER CARD\n");
                 break;
 
+            case 3:
+                printf("OTHER\n");
+                break;
+                
             default:
                 printf("INVALID\n");
                 break;
@@ -113,14 +117,25 @@ bool validate(void)
 
 int checkBrand(void)
 {
-    int cacheNumber = userCreditCardNumber;
+    long cacheNumber = userCreditCardNumber;
     while (cacheNumber > 100)
     {
         cacheNumber /= 10;
     }
-    printf("Brand number: %i\n", cacheNumber);
-
-    //loop through ccnumber, safe remainder to tempNumber until ccnumber <100
-    //look at tempNumber and work through defined states
-    return(0);
+    if (cacheNumber > 50 && cacheNumber < 56)
+    {
+        return(2);
+    }
+    else if (cacheNumber == 34 || cacheNumber == 37)
+    {
+        return(1);
+    }
+    else if (cacheNumber / 10 == 4)
+    {
+        return(0);
+    }
+    else
+    {
+        return(3);
+    }
 }
