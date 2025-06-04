@@ -13,7 +13,8 @@ int coinCounter;
 int main(void) {
     // Validate user input
     int changeLeft = 0;
-    do {
+    do
+    {
         changeLeft = get_int("How much CHANGE you got? ");
     }
     while (changeLeft < 1);
@@ -21,7 +22,8 @@ int main(void) {
     printf("You will need:\n");
 
     // Define and test coins as long as we have change left.
-    while (changeLeft > 0) {
+    while (changeLeft > 0)
+    {
         changeLeft = tryCoin(25, changeLeft);
         changeLeft = tryCoin(10, changeLeft);
         changeLeft = tryCoin(5, changeLeft);
